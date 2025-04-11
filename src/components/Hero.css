@@ -1,0 +1,14 @@
+.hero {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    height: 400px;
+  }
+  
+  .hero-content p {
+    font-size: 80px;
+    margin-top: 80px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  

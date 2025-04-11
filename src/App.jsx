@@ -1,38 +1,47 @@
-import React, { useContext } from "react";
-import AppContext from "./context/AppContext";
-import ShowProduct from "./components/product/ShowProduct";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ProductDetail from "./components/product/ProductDetail";
 import Navbar from "./components/Navbar";
+import ShowProduct from "./components/product/ShowProduct";
+import ProductDetail from "./components/product/ProductDetail";
 import SearchProduct from "./components/product/SearchProduct";
 import Register from "./components/user/Register";
- import { ToastContainer, toast } from "react-toastify";
- import "react-toastify/dist/ReactToastify.css";
- import Login from "./components/user/Login";
+import Login from "./components/user/Login";
 import Profile from "./components/user/Profile";
-import Cart from './components/Cart'
-import Address from './components/Address'
-import Checkout from './components/Checkout'
-import OrderConfirmation from './components/OrderConfirmation'
+import Cart from "./components/Cart";
+import Address from "./components/Address";
+import Checkout from "./components/Checkout";
+import OrderConfirmation from "./components/OrderConfirmation";
+import Hero from "./components/Hero"; // 👈 import the hero section
+import CollectionPage from "./components/product/CollectionProduct";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const TestHome = () => <h1>Home Route Works!</h1>;
+const TestProducts = () => <h1>Products Route Works!</h1>;
 
 const App = () => {
-  // const {} = useContext(AppContext)
   return (
     <Router>
       <Navbar />
+      <Hero /> {/* 👈 Add it here, just below Navbar */}
       <ToastContainer />
       <Routes>
-        <Route path="/" element={<ShowProduct />} />
-        <Route path="/product/search/:term" element={<SearchProduct />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/shipping" element={<Address />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/oderconfirmation" element={<OrderConfirmation />} />
-      </Routes>
+      {/* <Route path="/" element={<TestHome />} /> */}
+      <Route path="/" element={<ShowProduct />} />
+<Route path="/products" element={<TestProducts />} />
+
+  <Route path="/" element={<ShowProduct />} /> 👈 Add this line
+  <Route path="/products" element={<ShowProduct />} />
+  <Route path="/product/search/:term" element={<SearchProduct />} />
+  <Route path="/product/:id" element={<ProductDetail />} />
+  <Route path="/collections/scrub-sets" element={<CollectionPage/>}/>
+  <Route path="/register" element={<Register />} />
+  <Route path="/login" element={<Login />} />
+  <Route path="/profile" element={<Profile />} />
+  <Route path="/cart" element={<Cart />} />
+  <Route path="/shipping" element={<Address />} />
+  <Route path="/checkout" element={<Checkout />} />
+  <Route path="/orderconfirmation" element={<OrderConfirmation />} />
+</Routes>
     </Router>
   );
 };

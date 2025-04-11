@@ -1,0 +1,297 @@
+.show-product-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 40px;
+  border: none;
+}
+
+/* Main image (m1) larger */
+.main-image img {
+  width: 1000px;
+  height: auto;
+  object-fit: cover;
+  border: none;
+  margin-left: 200px;
+}
+
+/* Product info for main image */
+.main-image .product-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main-image .product-info p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Right side - stacked smaller images */
+.side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-images a {
+  display: block;
+  text-decoration: none;
+}
+
+.side-images img {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-right: 150px;
+}
+
+.side-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Product info for side images */
+.product-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.product-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-name:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.price-info {
+  margin: 0;
+  font-size: 16px;
+}
+
+.strikethrough-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 10px;
+}
+
+.discount-price {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* Collection Page Styles */
+.collection-page {
+  padding: 40px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.collection-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-options,
+.sort-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-label,
+.sort-label {
+  color: #666;
+  font-size: 14px;
+}
+
+.filter-dropdown,
+.sort-dropdown {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.product-count {
+  color: #666;
+  font-size: 14px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-card .product-info {
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Promotional Section Styles */
+.promo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 200px;
+  max-width: 1200px;
+}
+
+.promo-image img {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-left: 450px;
+}
+
+.promo-text {
+  flex: 2;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.promo-text h2 {
+  font-size: 30px;
+  /* font-weight: bold; */
+  color: #000;
+  margin: 0;
+}
+
+/* Scrub Image with Overlapping Text */
+.scrub-img {
+  position: relative; /* Container for absolute positioning */
+  width: 600px; /* Match side image width */
+  margin-left: 550px; /* As per your CSS */
+ 
+}
+
+.scrub-img img {
+  width: 900px;
+  height: 90em;
+  display: block;
+}
+
+.scrub-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: black;
+  background-color: white; /* Semi-transparent white background for readability */
+  padding: 10px 20px; /* Add padding for better appearance */
+  text-align: center;
+  border-radius: 5px;
+  height: 150px;
+  font-size: 30px;
+  width: 700px;
+  margin-left: 50px;
+  
+}
+
+/* Ensure footer stays at the bottom */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-product-container,
+.promo-section {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .show-product-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .main-image img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .side-images img {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .scrub-img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .promo-section {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .promo-image img {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .promo-text {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .scrub-text {
+    white-space: normal; /* Allow wrapping on mobile */
+    padding: 5px 10px; /* Reduce padding on mobile */
+  }
+}
