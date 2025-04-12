@@ -174,14 +174,14 @@
   align-items: center;
   padding: 20px;
   background-color: #ffffff;
-  margin-top: 200px;
+  margin-top: 400px;
   max-width: 1200px;
 }
 
 .promo-image img {
-  width: 500px;
-  height: auto;
-  object-fit: cover;
+  width: 600px;
+  height: 700px;
+  /* object-fit: cover; */
   border-radius: 4px;
   margin-left: 450px;
 }
@@ -201,33 +201,155 @@
 
 /* Scrub Image with Overlapping Text */
 .scrub-img {
-  position: relative; /* Container for absolute positioning */
-  width: 600px; /* Match side image width */
-  margin-left: 550px; /* As per your CSS */
- 
+  position: relative;
+  width: 600px;
+  margin-left: 500px; /* For the first scrub-img */
 }
 
 .scrub-img img {
   width: 900px;
-  height: 90em;
+  height: 700px; /* Reduced from 90em to a reasonable value */
   display: block;
 }
 
 .scrub-text {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text */
+  left: 60%;
+  transform: translate(-50%, -50%);
   color: black;
-  background-color: white; /* Semi-transparent white background for readability */
-  padding: 10px 20px; /* Add padding for better appearance */
+  background-color: white;
+  padding: 10px 20px;
   text-align: center;
   border-radius: 5px;
   height: 150px;
-  font-size: 30px;
-  width: 700px;
+  font-size: 20px;
+  width: 600px;
+  padding-top: 40px;
+}
+
+/* Review Section Scrub Image - Centered */
+.review-section {
+  margin-left: 0; /* Remove offset */
+  margin: 0 auto; /* Center the container */
+  width: 900px; /* Match the image width for centering */
+}
+
+.review-section img {
+  width: 100%; /* Ensure image fits the container */
+  height: auto;
+}
+
+/* Product Container and Section Styles */
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.product-section {
+  width: 400px;
+  margin-left: 0;
+}
+
+.product-section a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.product-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-section img:hover {
+  transform: scale(1.05);
+}
+
+.product-section .product-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Our Why Section - Image on Left, Text on Right */
+.our-why {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin-top: 120px;
+}
+
+.our-image img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 20px;
+  margin-left: 350px;
+}
+
+.why-text {
+  flex: 1;
+  text-align: left;
   margin-left: 50px;
-  
+}
+
+.why-text h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.why-text p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Our Kid Section - Text on Left, Image on Right */
+.our-kid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: row-reverse; /* Ensures text on left, image on right */
+  margin-top: 120px;
+}
+
+.kid-text {
+  flex: 2;
+  text-align: left;
+  padding-right: 20px;
+  margin-left: 40px;
+}
+
+.kid-text h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.kid-text p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.our-image1 img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  margin-left: 120px;
 }
 
 /* Ensure footer stays at the bottom */
@@ -243,8 +365,14 @@ body {
 }
 
 .show-product-container,
-.promo-section {
+.promo-section,
+.scrub-img,
+.product-container,
+.our-why,
+.our-kid,
+.review-section {
   flex: 1 0 auto;
+  margin-top: 40px;
 }
 
 footer {
@@ -274,6 +402,28 @@ footer {
     margin-left: 0;
   }
 
+  .scrub-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .scrub-text {
+    white-space: normal;
+    padding: 5px 10px;
+    height: auto;
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .review-section {
+    width: 100%;
+    margin: 0;
+  }
+
+  .review-section img {
+    width: 100%;
+  }
+
   .promo-section {
     flex-direction: column;
     text-align: center;
@@ -290,8 +440,33 @@ footer {
     margin-top: 10px;
   }
 
-  .scrub-text {
-    white-space: normal; /* Allow wrapping on mobile */
-    padding: 5px 10px; /* Reduce padding on mobile */
+  .product-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .our-why,
+  .our-kid {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .our-image img,
+  .our-image1 img {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .why-text,
+  .kid-text {
+    padding: 0 10px;
   }
 }

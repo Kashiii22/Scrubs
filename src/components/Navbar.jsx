@@ -47,14 +47,12 @@ const Navbar = () => {
         {/* Center links */}
         <div className="navbar-links d-flex gap-4">
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/products" className="nav-link">Shop All</Link>
-          <Link to="/contact" className="nav-link">Contact Us</Link>
+          <Link to="/products" className="nav-link">Shop All</Link> {/* Updated to /products */}
+          <Link to="/contact-us" className="nav-link">Contact Us</Link>
         </div>
 
         {/* Right Actions */}
-        <div className="navbar-actions d-flex align-items-center gap-3"   style={{ cursor: "pointer" }}
-        >
-
+        <div className="navbar-actions d-flex align-items-center gap-3" style={{ cursor: "pointer" }}>
           {/* Country Dropdown */}
           <select className="country-dropdown">
             <option value="australia">Australia | AUD $</option>
@@ -66,16 +64,13 @@ const Navbar = () => {
           </select>
 
           {/* Search Bar */}
-          
           <span
-  className="material-symbols-outlined search-icon"
-  onClick={() => navigate(`/product/search/${searchTerm}`)}
-  style={{ cursor: "pointer" }}
->
-  search
-</span>
-           
-          
+            className="material-symbols-outlined search-icon"
+            onClick={() => navigate(`/product/search/${searchTerm}`)}
+            style={{ cursor: "pointer" }}
+          >
+            search
+          </span>
 
           {/* Cart & Auth Buttons */}
           {isAuthenticated ? (
@@ -103,7 +98,7 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Link to="/login" >Login</Link>
+              <Link to="/login">Login</Link>
               <Link to="/register" className="btn btn-outline-info">Register</Link>
             </>
           )}

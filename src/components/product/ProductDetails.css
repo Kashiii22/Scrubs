@@ -95,6 +95,7 @@
   .payment-section h4 {
     font-weight: bold;
     margin-bottom: 5px;
+    color: #000;
   }
   
   .size-buttons {
@@ -120,6 +121,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    color: black;
   }
   
   .quantity-buttons button {
@@ -135,6 +137,7 @@
     align-items: center;
     gap: 8px;
     margin-top: 5px;
+    color: #000;
   }
   
   .preorder-button {

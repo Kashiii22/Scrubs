@@ -1,0 +1,128 @@
+.collection-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+  }
+  
+  .collection-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-options, .sort-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-label, .sort-label {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .filter-dropdown, .sort-dropdown {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .product-count {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+  }
+  
+  .sale-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #d32f2f;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+  
+  .product-info {
+    padding: 10px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .price-info {
+    font-size: 14px;
+  }
+  
+  .strikethrough-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+  }
+  
+  .discount-price {
+    color: #d32f2f;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .collection-page {
+      padding: 20px;
+    }
+  
+    .collection-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .filter-section {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .product-image {
+      height: 200px;
+    }
+  }
